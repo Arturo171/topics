@@ -1,0 +1,23 @@
+name: Validate Taxonomy
+
+on:
+  push:
+    branches:
+      - feature/integrated-setup
+  pull_request:
+    branches:
+      - feature/integrated-setup
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Taxonomy Validator
+        run: |
+          echo 'Running taxonomy validation...'
+          # Here, insert the command to run your taxonomy validator.
+          # Example: python validate_taxonomy.py
+          
